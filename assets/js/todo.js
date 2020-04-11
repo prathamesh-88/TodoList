@@ -1,3 +1,4 @@
+console.log("connect");
 $("ul").on("click", ".task",function(){
 		$(this).toggleClass("completed");
 });
@@ -16,8 +17,12 @@ $("input").on("keypress",function(event){
 		if(event.which === 13)
 		{
 			var task = $(this).val();
-			$("ul").append("<li><span class=\"del\"><i class=\"fas fa-trash-alt\"></i></span><span class=\"task\"> "+task+"</span></li>");
+			$("ul").append("<li><span class=\"del\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></span><span class=\"task\"> "+task+"</span></li>");
 			$(this).val("");
 		}	
 			
 });
+
+$("#add").on("click",function(){
+	$("input").slideToggle(500);
+})

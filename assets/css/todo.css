@@ -1,16 +1,20 @@
 body{
-	background: #c31432;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #000000;  
+	background: -webkit-linear-gradient(to right, #434343, #000000);  
+	background: linear-gradient(to right, #434343, #000000);
 	font-family: 'Comic Neue', cursive;
 }
 
 h1{
 	text-transform: uppercase;
 	text-align: center;
-	font-weight: normal;
+	font-weight: bold;
 	font-size: 20px;
-	background-color: orange;
+	color: white;
+	border-radius: 2px;
+	background: #c31432;  
+	background: -webkit-linear-gradient(to right, #240b36, #c31432);  
+	background: linear-gradient(to right, #240b36, #c31432);
 	padding: 5px;
 	margin: 0;
 }
@@ -18,7 +22,7 @@ h1{
 ul{
 	list-style: none;
 	padding: 0;
-	margin: 2px 0;
+	margin : 0 0;
 }
 
 li{
@@ -32,11 +36,29 @@ li:nth-child(2n){
 
 input{
 	width: 100%;
-	color: orange;
+	color: #a62339;
 	font-size: 18px;
 	padding: 10px 15px;
 	box-sizing: border-box;
 	border : 1px solid rgba(0,0,0,0);
+}
+
+li:hover .del{
+	width: 30px;
+	opacity: 1.0;
+}
+
+#add{
+	float: right;
+	margin-right: 5px;
+	color: white;
+}
+
+#container{
+	width: 400px;
+	margin: 100px auto;
+	border-radius: 10%;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
 .completed{
@@ -48,27 +70,19 @@ input{
 	margin-left: 10px;
 }
 
-#container{
-	background-color: white;
-	width: 400px;
-	margin: 100px auto;
-	box-shadow: 0 0 5px rgba(0,0,0,0.5);
-}
+
 
 .del{
+	width :0;
 	height:100%;
 	background-color: #db2124;
 	color: #fff;
 	text-align: center;
-	display: none;
-	padding: 0 5px;
-}
-
-li:hover .del{
-	width: 30px;
 	display: inline-block;
+	padding: 0 5px;
+	transition: 0.3s linear;
+	opacity: 0;
 }
 
-#add{
-	float: right;
-}
+
+
