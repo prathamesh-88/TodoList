@@ -23,6 +23,7 @@ ul{
 	list-style: none;
 	padding: 0;
 	margin : 0 0;
+	color: #302a2a;
 }
 
 li{
@@ -34,6 +35,11 @@ li:nth-child(2n){
 	background-color: white;
 }
 
+li:hover .del{
+	width: 30px;
+	opacity: 1.0;
+}
+
 input{
 	width: 100%;
 	color: #a62339;
@@ -41,12 +47,13 @@ input{
 	padding: 10px 15px;
 	box-sizing: border-box;
 	border : 1px solid rgba(0,0,0,0);
+	outline: none;
 }
 
-li:hover .del{
-	width: 30px;
-	opacity: 1.0;
+input:focus{
+	border : 2px solid #a62339;
 }
+
 
 #add{
 	float: right;
