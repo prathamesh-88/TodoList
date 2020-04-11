@@ -1,21 +1,23 @@
-$("li").on("click",function(){
+$("ul").on("click", ".task",function(){
 		$(this).toggleClass("completed");
 });
 
-$("li span").on("click",function(e){
+$("ul").on("click",".del",function(e){
 		$(this).parent().fadeOut("200", function(){
 			$(this).remove();
+		
 		});
 		
-		e.stopPropagation();
+			e.stopPropagation();
 		
 });
 
 $("input").on("keypress",function(event){
 		if(event.which === 13)
 		{
-			var task = $("input").val();
-			$("ul").append("<li><span class=\"del\">X</span> "+task+"</li>");
+			var task = $(this).val();
+			$("ul").append("<li><span class=\"del\"><i class=\"fas fa-trash-alt\"></i></span><span class=\"task\"> "+task+"</span></li>");
+			$(this).val("");
 		}	
 			
 });

@@ -1,12 +1,42 @@
 body{
-	background-color: black;
+	background: #c31432;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	font-family: 'Comic Neue', cursive;
 }
 
 h1{
 	text-transform: uppercase;
+	text-align: center;
 	font-weight: normal;
 	font-size: 20px;
+	background-color: orange;
+	padding: 5px;
+	margin: 0;
+}
+
+ul{
+	list-style: none;
+	padding: 0;
+	margin: 2px 0;
+}
+
+li{
+	line-height: 25px;
+	background-color: #cdcdc7;
+}
+
+li:nth-child(2n){
+	background-color: white;
+}
+
+input{
+	width: 100%;
+	color: orange;
+	font-size: 18px;
+	padding: 10px 15px;
+	box-sizing: border-box;
+	border : 1px solid rgba(0,0,0,0);
 }
 
 .completed{
@@ -14,15 +44,29 @@ h1{
 	color: gray;
 }
 
+.task{
+	margin-left: 10px;
+}
+
 #container{
 	background-color: white;
 	width: 400px;
 	margin: 100px auto;
-	box-shadow: 0 0 5px red;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
-ul{
-	list-style: none;
+.del{
+	height:100%;
+	background-color: #db2124;
+	color: #fff;
+	text-align: center;
+	display: none;
+	padding: 0 5px;
+}
+
+li:hover .del{
+	width: 30px;
+	display: inline-block;
 }
 
 #add{
